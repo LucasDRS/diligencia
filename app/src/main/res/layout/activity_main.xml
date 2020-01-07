@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="390dp"
+        android:layout_height="280dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="66dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="338dp"
+        android:layout_height="195dp"
+        android:text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim non sem varius volutpat. Duis vel lacus eros. Suspendisse consectetur magna est, ut ultrices lectus  varius vitae. "
+        android:textSize="22sp"
+        android:textAlignment="center"
+
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="409dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="271dp"
+        android:layout_height="119dp"
+        android:text="Experimente"
+        android:background="@drawable/botao"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="696dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
