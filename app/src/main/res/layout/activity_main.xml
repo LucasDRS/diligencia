@@ -9,30 +9,41 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="390dp"
-        android:layout_height="280dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="10dp"
-        tools:layout_editor_absoluteY="66dp" />
+        android:layout_width="333dp"
+        android:layout_height="282dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="338dp"
         android:layout_height="195dp"
-        android:text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim non sem varius volutpat. Duis vel lacus eros. Suspendisse consectetur magna est, ut ultrices lectus  varius vitae. "
-        android:textSize="22sp"
+        android:layout_marginTop="28dp"
+        android:text="@string/latin"
         android:textAlignment="center"
 
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="409dp" />
+        android:textColor="@color/cinza"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="271dp"
         android:layout_height="119dp"
-        android:text="Experimente"
         android:background="@drawable/botao"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="696dp" />
+        android:onClick="proximaTela"
+        android:text="Experimente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.235" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
