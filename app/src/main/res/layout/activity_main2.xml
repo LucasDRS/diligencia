@@ -86,6 +86,7 @@
         android:backgroundTint="@color/bordo"
         android:drawableLeft="@drawable/login"
         android:drawablePadding="3dp"
+        android:onClick="cadastro"
         android:paddingLeft="70dp"
         android:paddingRight="70dp"
         android:text="Entrar"
@@ -145,13 +146,14 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/botaocadastrar"
         android:layout_width="122dp"
         android:layout_height="55dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:background="@android:color/transparent"
+        android:onClick="cadastro"
         android:text="Cadastra-se"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/branco"
