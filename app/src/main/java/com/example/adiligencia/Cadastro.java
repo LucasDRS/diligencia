@@ -2,20 +2,77 @@ package com.example.adiligencia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class cadastro extends AppCompatActivity {
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
-    }
-    public void cadastro(View view){
+        Button botao = (Button) findViewById(R.id.botaocadastrar);
 
-        Intent intent = new Intent(this, cadastro.class);
-        startActivity(intent);
+        botao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                controlebanco crud = new controlebanco(getBaseContext());
+                EditText nome = (EditText)findViewById(R.id.Nome);
+                EditText email = (EditText)findViewById((R.id.email));
+                EditText senha = (EditText)findViewById(R.id.Senha);
+                EditText senhaConf = (EditText)findViewById(R.id.Repitaasenha);
+
+
+                String nomeString = nome.getText().toString();
+                String emailString = email.getText().toString();
+                String senhaString = senha.getText().toString();
+                String senhaConfString = senhaConf.getText().toString();
+
+                if(nomeString.isEmpty() || emailString.isEmpty() || senhaString.isEmpty() || senhaConfString.isEmpty()){
+
+                    String resultado = "preencha todos os campos";
+
+                    Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+
+                }else{
+                    if(senhaString.equals(senhaConfString)){
+                        //String resultado = "cadastrou";
+                        String resultado = crud.insereDado(nomeString,emailString,senhaString);
+                        Toast toast= Toast.makeText(getApplicationContext(),
+                                resultado, Toast.LENGTH_SHORT);
+                        toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 0);
+                        toast.show();
+
+                    }else{
+                        String resultado = "as senhas não conferem";
+
+                        Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+                    }
+
+                }
+
+
+
+
+
+
+
+
+            }
+        });
+
+
+
+
     }
 }

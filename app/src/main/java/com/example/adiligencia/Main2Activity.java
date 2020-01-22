@@ -13,9 +13,11 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
     }
-    public void cadastro(View view){
+
+    public void telacadastro(View view){
 
         Intent intent = new Intent(this, cadastro.class);
         startActivity(intent);
+
     }
 }
