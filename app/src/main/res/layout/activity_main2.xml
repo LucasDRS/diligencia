@@ -86,7 +86,7 @@
         android:backgroundTint="@color/bordo"
         android:drawableLeft="@drawable/login"
         android:drawablePadding="3dp"
-        android:onClick="telaHome"
+        android:onClick="telahome"
         android:paddingLeft="70dp"
         android:paddingRight="70dp"
         android:text="Entrar"
